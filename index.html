@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>musicPlayer</title>
+    <title>Прогноз погоды</title>
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,76 +13,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="weather">
-    <div class="weather__row">
-        <div class="current">
-            <div class="current__city">Омск</div>
-            <div class="weather__row-temp">
-                <div class="current__temp">15&deg;</div>
-                <div id="iconWeather" class="current__description">Ясно</div>
-            </div>
+<div class="title">Это приложение сделано на ванильном <span>JavaScript</span></div>
+<div class="subtitle">Данные берутся из этой <a target="_blank" href="https://openweathermap.org/api">API</a></div>
+
+<div class="wrapper">
+    <div class="enter-city">
+        <label>
+            <input type="text" class="inputCity" placeholder="Введите название города...">
+            <a class="button" type="submit">Тык</a>
+        </label>
+    </div>
+
+    <div class="content__row">
+        <div class="content__item">
+            <div class="content__title">Омск</div>
+            <div class="content__description">Ясно</div>
+            <div class="content__temp">15&deg;</div>
         </div>
 
-        <div class="forecast">
-            <div class="forecast__item">
-                <div id="time1" class="forecast__time">Сейчас</div>
-                <div id="img1" class="forecast__icon"><img src="img/sun.png" alt="sun"></div>
-                <div id="temp1" class="forecast__temp">15&deg;</div>
-            </div>
-
-            <div class="forecast__item">
-                <div id="time2" class="forecast__time">21</div>
-                <div id="img2" class="forecast__icon"><img src="img/clouds.png" alt="sun">
-                </div>
-                <div id="temp2" class="forecast__temp">15&deg;</div>
-            </div>
-
-            <div class="forecast__item">
-                <div id="time3" class="forecast__time">21</div>
-                <div id="img3" class="forecast__icon"><img src="img/clouds.png" alt="sun">
-                </div>
-                <div id="temp3" class="forecast__temp">15&deg;</div>
-            </div>
-
-            <div class="forecast__item">
-                <div id="time4" class="forecast__time">21</div>
-                <div id="img4" class="forecast__icon"><img src="img/snowflake.png" alt="sun">
-                </div>
-                <div id="temp4" class="forecast__temp">15&deg;</div>
-            </div>
-
-        </div>
-
-        <div class="details">
-            <div class="details__row">
-                <div class="details__item">
-                    <div class="details__name">Атмосферное давление</div>
-                    <div id="pressure" class="details__value">22&deg;</div>
+        <div class="content__footer-row">
+            <div class="content__footer-items">
+                <div class="content__footer-item">
+                    <div class="humidity">Влажность</div>
+                    <div class="humidityValue"></div>
                 </div>
 
-                <div class="details__item">
-                    <div class="details__name">Влажность</div>
-                    <div id="humidity" class="details__value">50%</div>
+                <div class="content__footer-item">
+                    <div class="speed">Скорость ветра</div>
+                    <div class="speedValue"></div>
                 </div>
             </div>
 
-            <div class="details__row">
-                <div class="details__item">
-                    <div class="details__name">Максимальная температура сегодня:</div>
-                    <div id="temp__max" class="details__value">22&deg;</div>
+            <div class="content__footer-items">
+                <div class="content__footer-item">
+                    <div class="clouds">Облачность</div>
+                    <div class="cloudsValue"></div>
                 </div>
 
-                <div class="details__item">
-                    <div class="details__name">Ветер</div>
-                    <div id="m/s" class="details__value">5 м/с</div>
+                <div class="content__footer-item">
+                    <div class="grnd">Атмосферное давление</div>
+                    <div class="grndValue"></div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
+
 </div>
+
 <script src="app.js"></script>
 </body>
 </html>

@@ -4,97 +4,104 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-
-html[data-theme="day"] .weather,
-.weather{
-    background: linear-gradient(360deg,#3594bf 0%, rgba(255,255,255,0) 100%), #53a6cb;
-}
-.weather{
-    width: 100%;
-    min-height: 100vh;
-}
-
-.weather__row{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1em;
-}
-
-.current{
+.title{
     text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
-.current__city{
-    font-size: 70px;
-    color: #F2F2F2;
-    line-height: 82px;
-    margin-bottom: 20px;
+.title span{
+    color: red;
+    font-weight: 700;
+    font-size: 35px;
 }
-.current__description{
+.text{
+    margin-top: 40px;
+    text-align: center;
     font-size: 25px;
-    line-height: 29px;
-    color: #F2F2F2;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.current__temp{
-    font-size: 100px;
-    color: #F2F2F2;
+.text span{
+    color: red;
+    font-weight: 700;
 }
-
-.forecast{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-}
-.forecast__item{
+.subtitle{
     text-align: center;
-}
-
-.forecast__icon img{
-    width: 100px;
-    padding-bottom: 19px;
-    padding-top: 19px;
-}
-
-.forecast__time{
-    color: #F2F2F2;
-    font-size: 20px;
-    line-height: 23px;
-}
-.forecast__temp{
     font-size: 30px;
-    line-height: 35px;
-    color: #F2F2F2;
 }
-.details{
-    margin-top: 50px;
+.subtitle a{
+    text-decoration: none;
+    color: red;
+    font-weight: 700;
 }
-.details__row{
-    display: flex;
-    align-items: center;
+body{
+
 }
 
-.details__item{
+.enter-city{
+    text-align: center;
+    margin: 50px 0;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+input[type="text"]{
+    height: 40px;
+    width: 500px;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 5px;
+    background: #e7e7e7;
+    padding: 10px;
+}
+.content__row{
+    background: linear-gradient(360deg, #3594BF 0%, rgba(255, 255, 255, 0) 100%), #53A6CB;
+    height: 500px;
+    width: 500px;
     margin: 0 auto;
-    width: 100%;
+    border-radius: 10px;
+    color: #F2F2F2;
+
+    padding-top: 20px;
+}
+.content__item{
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.details__name{
+.content__title{
+    font-size: 70px;
+}
+
+.content__description{
+    font-size: 25px;
+}
+.content__temp{
+    font-size: 75px;
+}
+
+.button{
+    height: 40px;
+    width: 90px;
+    font-weight: 700;
     font-size: 20px;
-    line-height: 23px;
-    color: #F2F2F2;
-    padding-bottom: 10px;
+    border-radius: 5px;
+    background: #e7e7e7;
+    padding: 8px 40px;
+    color: #000;
+    text-decoration: none;
+    transition: .5s;
+}
+.button:hover{
+    background: #e7b1b1;
 }
 
-.details__value{
-    font-size: 30px;
-    line-height: 35px;
-    color: #F2F2F2;
-}
-
-.weather__row-temp{
+.content__footer-row{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.content__footer-item{
+    margin-top: 20px;
 }
