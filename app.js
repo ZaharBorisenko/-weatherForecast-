@@ -10,7 +10,26 @@ let speedValue = document.querySelector('.speedValue');
 let cloudsValue = document.querySelector('.cloudsValue');
 let grndValue = document.querySelector('.grndValue')
 
+//значения по умолчанию.
+function init(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Omsk&appid=73ff84cc6e2c68d35b171dc50ff6525a&lang=ru')
+        .then(response => response.json())
+        .then(data => {
+            cityName.innerHTML = data.name;
+            description.innerHTML = data.weather[0].description;
+            temp.innerHTML = (data.main.temp - 273).toFixed(0) + '&deg;';
 
+            humidityValue.innerHTML = data.main.humidity + '%';
+            speedValue.innerHTML = data.wind.speed.toFixed(0) + 'м/с';
+            cloudsValue.innerHTML = data.clouds.all + '%';
+            grndValue.innerHTML = (data.main.pressure / 1.332).toFixed(0) + ' мм.рт.ст';
+        })
+
+        .catch(err => alert('Введите правильное название города!'));
+}
+init();
+
+//значения при клике
 button.addEventListener('click',function () {
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputCity.value+'&appid=73ff84cc6e2c68d35b171dc50ff6525a&lang=ru')
         .then(response => response.json())
